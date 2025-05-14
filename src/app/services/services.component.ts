@@ -155,9 +155,8 @@ let httpHeaders = new HttpHeaders({"Authorization":jwt})
   
 
       listeInstituts(): Observable<InstitutWrapper> {
-        let jwt = this.authService.getToken();
-        let httpHeaders = new HttpHeaders({ "Authorization": jwt });
-        return this.http.get<InstitutWrapper>(this.apiURLIns + "/allIns", { headers: httpHeaders });
+       
+        return this.http.get<InstitutWrapper>(this.apiURLIns + "/allIns");
       }
       
      /* listeInstituts():Observable<Institut[]>{
